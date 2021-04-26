@@ -1,0 +1,116 @@
+div.widget {
+  width: 180px;
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #37c1f3,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #28baf0,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  position: absolute;
+  z-index: 999;
+  padding: 18px;
+
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.widget.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.widget.rain {
+  background: #373b44; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #6a9df0,
+    #37578a,
+    #373b44
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #5592f3,
+    #37578a,
+    #373b44
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.widgetTop {
+  display: inline-block;
+  text-align: center;
+}
+.widgetTop > h1 {
+  position: relative;
+  font-weight: lighter;
+  display: inline-block;
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-left: -7px;
+}
+.widgetTop > h1::after {
+  position: absolute;
+  content: "";
+  right: -13px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.city {
+  display: flex;
+  align-items: center;
+}
+.city > h1 {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.city > i {
+  transform: scale(0.6);
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+/*BOTTOM PART */
+.widgetBottom {
+  margin-top: 20px;
+}
+.widgetBottom > img {
+  width: 25px;
+}
+.widgetBottom > p {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.widgetBottom > p > span:last-child {
+  margin-left: 8px;
+}
+.widgetBottom > p > span {
+  position: relative;
+}
+.widgetBottom > p > span::after {
+  position: absolute;
+  content: "";
+  right: -6px;
+  top: 1px;
+
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+/*INIT*/
+
+/*TRIGGER WIDGET*/
